@@ -1,0 +1,14 @@
+github.com/applicaset/auth-svc v0.0.0-20201214153722-9254cc33eba8 h1:LXVHdIy98N/kxQ3e3NMmfAADWkkEJnb67vAL3w7qyYc=
+github.com/applicaset/auth-svc v0.0.0-20201214153722-9254cc33eba8/go.mod h1:Ydytics1q6tn76vCA6HaMnGLS780WLkblRNCxjAkUzE=
+github.com/applicaset/otp-svc v0.0.0-20201215111645-a2507fd7ff0d h1:WvYUnI9YqYowb7Xr2YAEx4qf5KgOE5y1poUaB+OwuQM=
+github.com/applicaset/otp-svc v0.0.0-20201215111645-a2507fd7ff0d/go.mod h1:jJDmOvqJj3gl7ZhUq9SM2Mqw+UqcaNNJDpIPxYhbsXQ=
+github.com/applicaset/sms-svc v0.0.0-20201215110019-c99edc580ae3 h1:eEjp41bPvrDpw4n71/Tnvm+3BuVR/DZ2HXMLB+6JgwY=
+github.com/applicaset/sms-svc v0.0.0-20201215110019-c99edc580ae3/go.mod h1:wAvAa7gSPWKIcVQnXTkrZGwiji8Tspp+Rj4E0k7LK3Q=
+github.com/applicaset/user-svc v0.0.0-20201214180851-45ce42600b3e h1:oBkVIArqisGeqUB6enw8nsfmj/3yoPPGaklkPEjBNqA=
+github.com/applicaset/user-svc v0.0.0-20201214180851-45ce42600b3e/go.mod h1:dlyIz9i5tFcWTCYVYbzK+pD+YpoebC9Y/MKGSlQzBK4=
+github.com/google/uuid v1.1.2 h1:EVhdT+1Kseyi1/pUmXKaFxYsDNy9RQYkMWRH68J/W7Y=
+github.com/google/uuid v1.1.2/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/nasermirzaei89/jwt v0.0.0-20191012203123-932fbb1484a6 h1:IMsMpjLnF5YmGOui+SI2GyHUPpG9b5UmQDwTb7686OU=
+github.com/nasermirzaei89/jwt v0.0.0-20191012203123-932fbb1484a6/go.mod h1:VgBtXc4TW3f+KtWIzCuWZe0hWPut5uAlSj9MPrpo/Z0=
+github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
+github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
