@@ -51,7 +51,6 @@ func (oa *otpAuth) Validate(ctx context.Context, args map[string]interface{}) (u
 		OTPUUID: otpID,
 		PinCode: pinCode,
 	})
-
 	if err != nil {
 		return nil, errors.Wrap(err, "error on verify otp")
 	}
