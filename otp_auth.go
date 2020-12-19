@@ -1,4 +1,4 @@
-package otp_auth
+package otpauth
 
 import (
 	"context"
@@ -10,7 +10,7 @@ import (
 const Name = "otp"
 
 type otpAuth struct {
-	otpSvc otp_svc.Service
+	otpSvc otpsvc.Service
 }
 
 type response struct {
@@ -25,8 +25,9 @@ func (rsp response) ID() string {
 	return rsp.id
 }
 
-func (oa *otpAuth) Validate(ctx context.Context, args map[string]interface{}) (user.ValidateResponse, error) {
+func (oa *otpAuth) Validate(ctx context.Context, args map[string]interface{}) (usersvc.ValidateResponse, error) {
 	rsp := new(response)
+
 	iOTPID, ok := args["otp_id"]
 	if !ok {
 		return rsp, nil
@@ -47,7 +48,7 @@ func (oa *otpAuth) Validate(ctx context.Context, args map[string]interface{}) (u
 		return rsp, nil
 	}
 
-	res, err := oa.otpSvc.VerifyOTP(ctx, otp_svc.VerifyOTPRequest{
+	res, err := oa.otpSvc.VerifyOTP(ctx, otpsvc.VerifyOTPRequest{
 		OTPUUID: otpID,
 		PinCode: pinCode,
 	})
@@ -60,7 +61,7 @@ func (oa *otpAuth) Validate(ctx context.Context, args map[string]interface{}) (u
 	return rsp, nil
 }
 
-func NewAuthProvider(otpSvc otp_svc.Service) user.AuthProvider {
+func NewAuthProvider(otpSvc otpsvc.Service) usersvc.AuthProvider {
 	oa := otpAuth{
 		otpSvc: otpSvc,
 	}
@@ -68,6 +69,6 @@ func NewAuthProvider(otpSvc otp_svc.Service) user.AuthProvider {
 	return &oa
 }
 
-func New(otpSvc otp_svc.Service) user.Option {
-	return user.WithAuthProvider(Name, NewAuthProvider(otpSvc))
+func New(otpSvc otpsvc.Service) usersvc.Option {
+	return usersvc.WithAuthProvider(Name, NewAuthProvider(otpSvc))
 }
